@@ -2,7 +2,7 @@ FROM node:12.7-alpine AS build
 WORKDIR /usr/src/app
 COPY package.json ./
 RUN npm install
-EXPOSE 4200/tcp 
+EXPOSE 80/tcp 
 COPY . .
 RUN npm run build --prod
 
