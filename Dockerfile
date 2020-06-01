@@ -1,5 +1,9 @@
-FROM nginx:alpine
-LABEL author="Debojyoti Dutta"
-COPY ./dist/covid19Project  /usr/share/nginx/html
-EXPOSE 80 443
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+FROM node:12.7-alpine AS build
+WORKDIR /usr/src/app
+COPY package.json ./
+RUN npm install
+COPY . .
+RUN npm run build --prod
+
+FROM nginx:1.17.1-alpine
+COPY --from=build /usr/src/app/dist/covid19Project /usr/share/nginx/html
