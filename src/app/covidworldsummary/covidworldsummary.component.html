@@ -1,0 +1,55 @@
+<div>
+  {{products.updated | date: 'medium'}}
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-xs col-sm col-md col-lg col-xl">
+        <div class="card">
+            <div class="card-body confirmedCases">
+                <span>Confirmed</span>
+                <div class="space">
+                    <i class="fa fa-plus" aria-hidden="true" style="padding: 4px;" *ngIf="products.todayCases>0"></i>
+                    <i class="fa fa-minus" aria-hidden="true" style="padding: 4px;" *ngIf="products.todayCases<0"></i> 
+                    {{products.todayCases}}                 
+                </div>
+                <span><h2 class="confirmedCases">{{products.cases}}</h2></span>
+            </div>
+        </div>
+      </div>
+      <div class="col-xs col-sm col-md col-lg col-xl">
+        <div class="card">
+            <div class="card-body activeCases">
+                <div>Active</div>
+                <div style="padding: 13px;" class="space"></div>
+                <span><h2 class="activeCases">{{products.active}}</h2></span>
+            </div>
+        </div>
+      </div>
+      <div class="col-xs col-sm col-md col-lg col-xl">
+        <div class="card">
+            <div class="card-body deathCases">
+                <div>Deaths</div>
+                <div class="space">
+                  <i class="fa fa-plus" aria-hidden="true" style="padding: 4px;" *ngIf="products.todayDeaths>0"></i>
+                  <i class="fa fa-minus" aria-hidden="true" style="padding: 4px;" *ngIf="products.todayDeaths<0"></i> 
+                  {{products.todayDeaths}}                 
+              </div>
+              <span><h2 class="deathCases">{{products.deaths}}</h2></span>
+            </div>
+        </div>
+      </div>
+      <div class="col-xs col-sm col-md col-lg col-xl">
+        <div class="card">
+            <div class="card-body recoveredCases">
+                <div>Recovered</div>
+                <div class="space">
+                  <i class="fa fa-plus" aria-hidden="true" style="padding: 4px;" *ngIf="products.todayRecovered>0"></i>
+                  <i class="fa fa-minus" aria-hidden="true" style="padding: 4px;" *ngIf="products.todayRecovered<0"></i> 
+                  {{products.todayRecovered}}                 
+              </div>
+              <span><h2 class="recoveredCases">{{products.recovered}}</h2></span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,24 @@
+.confirmedCases{
+    color: red;
+}
+
+.activeCases{
+    color: blue;
+}
+
+.deathCases{
+    color: green;
+}
+
+.recoveredCases{
+    color: grey;
+}
+
+.card{
+    max-width: 18rem;
+    border: none;
+}
+
+.space{
+    padding: 8px;
+}
