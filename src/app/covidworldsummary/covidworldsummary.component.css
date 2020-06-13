@@ -1,24 +1,39 @@
-.confirmedCases{
-    color: red;
-}
-
-.activeCases{
-    color: blue;
-}
-
-.deathCases{
-    color: green;
-}
-
-.recoveredCases{
-    color: grey;
-}
-
 .card{
     max-width: 18rem;
-    border: none;
+}
+
+.card-body, .coviddetails{
+    text-align: center;
+    color: white;
+}
+
+.gridCard{
+    margin-bottom: 5px;
 }
 
 .space{
     padding: 8px;
+}
+
+.fa{
+    font-size: 6px;
+}
+
+.fa-plus{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.container{
+    padding-top: 15%;
+    background: none;
+}
+
+.card{
+    background-color: transparent;
+    border-color: white;
+}
+
+.center{
+    margin: auto;
 }

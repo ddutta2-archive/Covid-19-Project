@@ -6,19 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CovidworldsummaryComponent } from './covidworldsummary/covidworldsummary.component';
 import { CovidcountrysummaryComponent } from './covidcountrysummary/covidcountrysummary.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     CovidworldsummaryComponent,
-    CovidcountrysummaryComponent
+    CovidcountrysummaryComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DatePipe    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
