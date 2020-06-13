@@ -8,6 +8,7 @@ import { CovidworldsummaryComponent } from './covidworldsummary/covidworldsummar
 import { CovidcountrysummaryComponent } from './covidcountrysummary/covidcountrysummary.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { DatePipe } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DatePipe } from '@angular/common';
     HttpClientModule
   ],
   providers: [
-    DatePipe    
+    DatePipe,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}    
   ],
   bootstrap: [AppComponent]
 })
