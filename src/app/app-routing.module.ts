@@ -5,7 +5,7 @@ import { CovidcountrysummaryComponent } from './covidcountrysummary/covidcountry
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/countries', pathMatch: 'full' },
+  { path: '', redirectTo: '/world', pathMatch: 'full' },
   {path: 'world', component: CovidworldsummaryComponent},
   {path: 'countries', component: CovidcountrysummaryComponent},
 ];
